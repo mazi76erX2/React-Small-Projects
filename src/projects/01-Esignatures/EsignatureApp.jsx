@@ -3,11 +3,16 @@ import Title from "../components/Title";
 
 export default function EsignatureApp() {
   const [name, setName] = useState("Your Signature");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState("DoB");
 
   const handleNameChange = (e) => {
     // console.log(e.target.value);
     setName(e.target.value);
+  };
+
+  const handleDateChange = (e) => {
+    // console.log(e.target.value);
+    setDate(e.target.value);
   };
 
   const inputStyle = {
@@ -21,8 +26,11 @@ export default function EsignatureApp() {
 
   return (
     <div className="container text-center">
-      <Title classes={"title text-center"} text={"Name"} />
-      <Title classes={"main-title text-center mb-4"} text={"Date"} />
+      <Title classes={"title text-center"} text={name} />
+      <Title
+        classes={"main-title text-center mb-4"}
+        text={!date ? "DoB" : date}
+      />
       <p>
         Quis duis aliqua culpa do ullamco dolor exercitation in laboris elit
         labore enim duis anim. Laborum voluptate dolore sint consequat. Deserunt
@@ -41,7 +49,12 @@ export default function EsignatureApp() {
           top: "40vh",
         }}
       >
-        <input type="date" value={date} style={inputStyle}></input>
+        <input
+          type="date"
+          value={date}
+          style={inputStyle}
+          onChange={handleDateChange}
+        ></input>
         <input
           type="text"
           value={name}
