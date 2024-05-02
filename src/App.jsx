@@ -4,10 +4,10 @@ import RandomizeColors from "./projects/02-RandomizeColors/RandomizeColors";
 
 function App() {
   return (
-    <>
+    <div className="App">
       {/* <EsignatureApp /> */}
       <RandomizeColors />
-    </>
+    </div>
   );
 }
 
