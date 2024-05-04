@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Title from "../components/Title";
+import MinatoImg from "./img/minato-fights-the-tailed-beasts.avif";
 
 export default function LikeMyPhoto() {
   const [like, setLike] = useState(0);
