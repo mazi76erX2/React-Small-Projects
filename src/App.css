@@ -1199,7 +1199,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    user-select: none;
+    -webkit-user-select: none;
 }
 
 .navbar-logo {
