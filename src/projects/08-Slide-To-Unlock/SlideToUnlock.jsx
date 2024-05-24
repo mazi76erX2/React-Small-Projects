@@ -11,7 +11,6 @@ const SlideToUnlock = () => {
 
   const handleLockSliderInput = (e) => {
     setLockSliderValue(e.target.value);
-    // console.log(lockSliderValue);
   };
 
   useEffect(() => {
